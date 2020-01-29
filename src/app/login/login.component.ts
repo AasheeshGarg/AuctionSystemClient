@@ -32,10 +32,10 @@ export class LoginComponent implements OnInit {
     this.sharedServ.register(data).subscribe((result) => {
       console.log(result);
       if(data.userType == 'VENDOR') {
-        alert("Vendor Registered");
+        alert("User Registered");
       }
       else if(data.userType == 'CUSTOMER'){
-        alert("Customer Registered");
+        alert("User Registered");
       }
     }, (err) => {
       console.log(err);
@@ -49,11 +49,11 @@ export class LoginComponent implements OnInit {
       console.log(result);
       if(result) {
         if(data.userType == 'VENDOR') {
-          console.log("Vendor login");
+          alert("User login as Vendor");
           this.router.navigate(['/app-add-product-auction']);
         }
         else if(data.userType == 'CUSTOMER'){
-          console.log("Customer login");
+          alert("User login as Customer");
           this.router.navigate(['/app-view-product-auction']);
         }
       } 
