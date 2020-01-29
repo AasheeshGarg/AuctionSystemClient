@@ -1,0 +1,13 @@
+<h1>Login</h1>
+
+<p>Username : <input [(ngModel)]="username" [ngModelOptions]="{standalone: true}" type="text" required></p>
+<p>Password : <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" required></p>
+<p>UserType : <select [(ngModel)]="userType" [ngModelOptions]="{standalone: true}" name="userType" id="">
+    <option value="VENDOR">VENDOR</option>
+    <option value="CUSTOMER">CUSTOMER</option>
+</select></p>
+<p>
+
+    <button (click)="login()">Login</button>
+    <button (click)="signup()">SignUp</button>
+
