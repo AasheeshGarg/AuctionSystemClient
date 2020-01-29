@@ -4,11 +4,15 @@
     Description : <input [(ngModel)]="description" [ngModelOptions]="{standalone: true}" type="text">
     <button (click)="addProduct()">Add product</button></p>
 
-<p><button (click)="getProduct()">Get Products</button></p>
+<p>Click to get the Product List <button (click)="getProduct()">Get Products</button></p>
 <div *ngFor = "let product of prodList">
     <p *ngIf = 'product.productId'>{{product.productId}}</p>
     <p *ngIf = 'product.productName'>{{product.productName}}</p>
     <p *ngIf = 'product.description'>{{product.description}}</p>
 </div>
 
-<p><button (click)="saveAuction()">Save Auction</button></p>
+<p>Minimum Price : <input [(ngModel)]="minPrice" [ngModelOptions]="{standalone: true}" type="text" required>
+    Minimum Increment : <input [(ngModel)]="minIncrement" [ngModelOptions]="{standalone: true}" type="text" required>
+    Status : <input [(ngModel)]="status" [ngModelOptions]="{standalone: true}" type="text" required>
+    Product Id : <input [(ngModel)]="productId" [ngModelOptions]="{standalone: true}" type="text" required>
+    <button (click)="saveAuction()">Start your Product Auction</button></p>
