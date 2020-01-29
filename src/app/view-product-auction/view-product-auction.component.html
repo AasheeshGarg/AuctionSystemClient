@@ -1,1 +1,9 @@
-<p>view-product-auction works!</p>
+<h1>Product/Auction Details</h1>
+
+<p><button (click)="getProduct()">View products</button></p>
+
+<div *ngFor = "let product of prodList">
+    <p *ngIf = 'product.productId'>{{product.productId}}</p>
+    <p *ngIf = 'product.productName'>{{product.productName}}</p>
+    <p *ngIf = 'product.description'>{{product.description}}</p>
+</div>
