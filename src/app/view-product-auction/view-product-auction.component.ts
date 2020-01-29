@@ -26,4 +26,8 @@ export class ViewProductAuctionComponent implements OnInit {
     });
   }
 
+  startBid() {
+    this.router.navigate(['/app-bid']);
+  }
+
 }
