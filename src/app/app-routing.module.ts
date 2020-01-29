@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/app-login', pathMatch: 'full'},
   { path: 'app-login', component: LoginComponent },
   { path: 'app-add-product-auction', component: AddProductAuctionComponent },
-  { path: 'app-view-product-auction', component: ViewProductAuctionComponent }
+  { path: 'app-view-product-auction', component: ViewProductAuctionComponent },
+  { path: 'app-bid', component: BidComponent }
 ];
 
 @NgModule({
