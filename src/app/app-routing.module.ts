@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddProductAuctionComponent } from './add-product-auction/add-product-auction.component';
 import { LoginComponent } from './login/login.component';
 import { ViewProductAuctionComponent } from './view-product-auction/view-product-auction.component';
+import { BidComponent } from './bid/bid.component';
 
 
 const routes: Routes = [

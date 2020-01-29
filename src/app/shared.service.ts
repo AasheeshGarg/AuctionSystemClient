@@ -31,6 +31,25 @@ export class SharedService {
     return this.http.post<any>('http://localhost:8081/users/login', data, this.httpOptions);
   }
 
+  addProduct(data): Observable<any> {
+    console.log(data);
+    return this.http.post<any>('http://localhost:8081/product', data, this.httpOptions);
+  }
+
+  getProducts(): Observable<any> {
+    return this.http.get<any>('http://localhost:8081/product/1', this.httpOptions);
+  }
+
+  saveBid(data): Observable<any> {
+    console.log(data);
+    return this.http.post<any>('http://localhost:8081/bid', data, this.httpOptions);
+  }
+
+  saveAuction(data): Observable<any> {
+    console.log(data);
+    return this.http.post<any>('http://localhost:8081/auction', data, this.httpOptions);
+  }
+
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
   
