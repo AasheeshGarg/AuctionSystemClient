@@ -18,7 +18,9 @@ export class AddProductAuctionComponent implements OnInit {
   public minPrice;
 	public minIncrement;
 	public status;
-	public productId;
+  public productId;
+  public startDate;
+  public endDate
 
   ngOnInit() {
   }
@@ -57,8 +59,8 @@ export class AddProductAuctionComponent implements OnInit {
     let data = {
       "minPrice": this.minPrice,
 	    "minIncrement": this.minIncrement,
-	    "startDate":1580151313,
-	    "endDate":1580261313,
+	    "startDate": this.startDate,
+	    "endDate": this.endDate,
 	    "status": this.status,
 	    "product": { "productId": this.productId },
     	"user": { "userId": 1 }
@@ -66,10 +68,14 @@ export class AddProductAuctionComponent implements OnInit {
     console.log(data);
     this.sharedServ.saveAuction(data).subscribe((result) => {
       console.log(result);
-      alert("Auction Started !!!");
+      alert("Auction Saved !!!");
     }, (err) => {
       console.log(err);
     });
+  }
+
+  result() {
+    this.router.navigate(['/app-result']);
   }
 
 }
