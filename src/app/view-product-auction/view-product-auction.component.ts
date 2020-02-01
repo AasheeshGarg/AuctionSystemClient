@@ -12,7 +12,8 @@ export class ViewProductAuctionComponent implements OnInit {
   constructor(private sharedServ:SharedService,private route: ActivatedRoute, private router: Router) { }
 
   public prodList;
-  
+  public auctionList;
+
   ngOnInit() {
   }
 
@@ -21,6 +22,16 @@ export class ViewProductAuctionComponent implements OnInit {
       console.log(result);
       this.prodList = result;
       alert("Product List");
+    }, (err) => {
+      console.log(err);
+    });
+  }
+
+  getAuction() {
+    this.sharedServ.getAuctions().subscribe((result) => {
+      console.log(result);
+      this.auctionList = result;
+      alert("Auction List");
     }, (err) => {
       console.log(err);
     });

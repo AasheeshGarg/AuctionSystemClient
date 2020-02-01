@@ -3,9 +3,22 @@
 <p><button (click)="getProduct()">View products</button></p>
 
 <div *ngFor = "let product of prodList">
-    <p *ngIf = 'product.productId'>{{product.productId}}</p>
-    <p *ngIf = 'product.productName'>{{product.productName}}</p>
-    <p *ngIf = 'product.description'>{{product.description}}</p>
+    <p *ngIf = 'product.productId'>Product Id : {{product.productId}}</p>
+    <p *ngIf = 'product.productName'>Product Name : {{product.productName}}</p>
+    <p *ngIf = 'product.description'>Product Description : {{product.description}}</p>
+</div>
+
+<p><button (click)="getAuction()">View all Auctions</button></p>
+
+<div *ngFor = "let auction of auctionList">
+    <p *ngIf = 'auction.auctionId'>Auction Id : {{auction.auctionId}}</p>
+    <p *ngIf = 'auction.minPrice'>Minimum Price : {{auction.minPrice}}</p>
+    <p *ngIf = 'auction.minIncrement'>Minimum Increment : {{auction.minIncrement}}</p>
+    <p *ngIf = 'auction.startDate'>Start Date : {{auction.startDate}}</p>
+    <p *ngIf = 'auction.endDate'>End Date : {{auction.endDate}}</p>
+    <p *ngIf = 'auction.status'>Status : {{auction.status}}</p>
+    <p *ngIf = 'auction.product.productName'>Product Name : {{auction.product.productName}}</p>
+    <p *ngIf = 'auction.product.description'>Product Description : {{auction.product.description}}</p>
 </div>
 
 <p><button (click)="startBid()">Start Bid</button></p>
