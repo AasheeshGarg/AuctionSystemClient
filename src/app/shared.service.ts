@@ -40,6 +40,14 @@ export class SharedService {
     return this.http.get<any>('http://localhost:8081/product/1', this.httpOptions);
   }
 
+  getResult(): Observable<any> {
+    return this.http.get<any>('http://localhost:8081/result/5', this.httpOptions);
+  }
+
+  getAuctions(): Observable<any> {
+    return this.http.get<any>('http://localhost:8081/auctions', this.httpOptions);
+  }
+
   saveBid(data): Observable<any> {
     console.log(data);
     return this.http.post<any>('http://localhost:8081/bid', data, this.httpOptions);

@@ -10,13 +10,15 @@ import { AddProductAuctionComponent } from './add-product-auction/add-product-au
 import { ViewProductAuctionComponent } from './view-product-auction/view-product-auction.component';
 import { BidComponent } from './bid/bid.component'
 import { HttpClientModule } from '@angular/common/http';
+import { ResultComponent } from './result/result.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AddProductAuctionComponent,
     ViewProductAuctionComponent,
-    BidComponent
+    BidComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
