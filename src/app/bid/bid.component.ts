@@ -12,6 +12,9 @@ export class BidComponent implements OnInit {
   constructor(private sharedServ:SharedService,private route: ActivatedRoute, private router: Router) { }
 
   public bidValue;
+  public date;
+  public auctionId;
+  public userId;
   
   ngOnInit() {
   }
@@ -20,9 +23,9 @@ export class BidComponent implements OnInit {
     let data = {
       "bidValue" : this.bidValue,
       "bidStatus" : "CREATED",
-      "date" : 1580151313,
-      "auction" : { "auctionId" : 3 },
-      "user" : { "userId" : 1 }
+      "date" : this.date,
+      "auction" : { "auctionId" : this.auctionId },
+      "user" : { "userId" : this.userId }
     }
     return data;
   }

@@ -1,4 +1,9 @@
 <h1>Start Bidding !!!</h1>
 
-<p>Enter your Bid Value : <input [(ngModel)]="bidValue" [ngModelOptions]="{standalone: true}" type="text" required></p>
+<p>
+    Auction Id : <input [(ngModel)]="auctionId" [ngModelOptions]="{standalone: true}" type="text" required>
+    User Id : <input [(ngModel)]="userId" [ngModelOptions]="{standalone: true}" type="text" required>
+    Date : <input [(ngModel)]="date" [ngModelOptions]="{standalone: true}" type="text" required>
+    Enter your Bid Value : <input [(ngModel)]="bidValue" [ngModelOptions]="{standalone: true}" type="text" required>
+</p>
 <p><button (click)="saveBid()">Save Bid</button></p>
