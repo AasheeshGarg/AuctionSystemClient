@@ -15,6 +15,8 @@ export class BidComponent implements OnInit {
   public date;
   public auctionId;
   public userId;
+  public user;
+  public auctionList;
   
   ngOnInit() {
   }
@@ -36,6 +38,25 @@ export class BidComponent implements OnInit {
     this.sharedServ.saveBid(data).subscribe((result) => {
       console.log(result);
       alert("Bid Successfully Added !!!");
+    }, (err) => {
+      console.log(err);
+    });
+  }
+
+  getResult() {
+    this.sharedServ.getResult().subscribe((result) => {
+      console.log(result);
+      this.user = result;
+    }, (err) => {
+      console.log(err);
+    });
+  }
+
+  getAuction() {
+    this.sharedServ.getAuctions().subscribe((result) => {
+      console.log(result);
+      this.auctionList = result;
+      alert("Auction List");
     }, (err) => {
       console.log(err);
     });

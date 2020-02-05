@@ -7,3 +7,17 @@
     Enter your Bid Value : <input [(ngModel)]="bidValue" [ngModelOptions]="{standalone: true}" type="text" required>
 </p>
 <p><button (click)="saveBid()">Save Bid</button></p>
+
+<p><button (click)="getResult()">View Results</button></p>
+
+<div>
+    <p>User Id : {{user.userId}}</p>
+    <p>User Name : {{user.username}}</p>
+</div>
+
+<p><button (click)="getAuction()">Get Auction</button></p>
+
+<div *ngFor = "let auction of auctionList">
+    <p *ngIf = 'auction.product.productName'>Product Name : {{auction.product.productName}}</p>
+    <p *ngIf = 'auction.product.description'>Product Description : {{auction.product.description}}</p>
+</div>
