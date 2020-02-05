@@ -20,7 +20,7 @@ export class AddProductAuctionComponent implements OnInit {
 	public status;
   public productId;
   public startDate;
-  public endDate
+  public endDate;
 
   ngOnInit() {
   }
