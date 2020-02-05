@@ -31,11 +31,11 @@ export class LoginComponent implements OnInit {
     console.log(data);
     this.sharedServ.register(data).subscribe((result) => {
       console.log(result);
-      if(data.userType == 'VENDOR') {
-        alert("User Registered");
+      if(data.username!=null && data.password!=null && data.userType == 'VENDOR') {
+        alert("User Registered as Vendor");
       }
-      else if(data.userType == 'CUSTOMER'){
-        alert("User Registered");
+      else if(data.username!=null && data.password!=null && data.userType == 'CUSTOMER') {
+        alert("User Registered as Customer");
       }
     }, (err) => {
       console.log(err);
