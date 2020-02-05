@@ -41,7 +41,7 @@ export class SharedService {
   }
 
   getResult(): Observable<any> {
-    return this.http.get<any>('http://localhost:8081/result/5', this.httpOptions);
+    return this.http.get<any>('http://localhost:8081/result/6', this.httpOptions);
   }
 
   getAuctions(): Observable<any> {
